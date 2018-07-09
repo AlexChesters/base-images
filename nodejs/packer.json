@@ -6,7 +6,7 @@
       "source_ami": "ami-776a659d",
       "instance_type": "t2.nano",
       "ssh_username": "ec2-user",
-      "ami_name": "nodejs 0.0.0"
+      "ami_name": "nodejs 0.0.1 {{timestamp}}"
     }
   ],
   "provisioners": [
@@ -24,7 +24,8 @@
         "yum install -y ./epel.rpm",
         "yum install -y nodejs",
         "amazon-linux-extras install nginx1.12",
-        "mv /tmp/nginx.conf /etc/nginx/conf.d/nginx.conf"
+        "mv /tmp/nginx.conf /etc/nginx/nginx.conf",
+        "systemctl enable nginx"
       ]
     }
   ]
