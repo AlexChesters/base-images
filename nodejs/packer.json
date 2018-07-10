@@ -6,7 +6,7 @@
       "source_ami": "ami-776a659d",
       "instance_type": "t2.nano",
       "ssh_username": "ec2-user",
-      "ami_name": "nodejs 0.0.1 {{timestamp}}"
+      "ami_name": "nodejs {{timestamp}}"
     }
   ],
   "provisioners": [
@@ -25,7 +25,8 @@
         "yum install -y nodejs",
         "amazon-linux-extras install nginx1.12",
         "mv /tmp/nginx.conf /etc/nginx/nginx.conf",
-        "systemctl enable nginx"
+        "systemctl enable nginx",
+        "echo \"169.254.169.254 ec2-metadata\" >> /etc/hosts"
       ]
     }
   ]
