@@ -1,5 +1,6 @@
 # base-images
-A collection of base AMI definitions that can be built using Packer
+A collection of base AMI definitions that can be built using Packer. These are
+all based on Amazon Linux 2.
 
 ## images
 ### [`nodejs`](./nodejs)
