@@ -1,0 +1,21 @@
+{
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "region": "eu-west-1",
+      "source_ami": "ami-776a659d",
+      "instance_type": "t2.nano",
+      "ssh_username": "ec2-user",
+      "ami_name": "docker {{timestamp}}"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "execute_command": "echo 'packer' | sudo -S sh -c '{{ .Vars }} {{ .Path }}'",
+      "inline": [
+        "yum install -y docker"
+      ]
+    }
+  ]
+}
