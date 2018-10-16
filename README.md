@@ -9,3 +9,6 @@ running on port 8080
 
 ### [`docker`](./docker)
 Comes with Docker installed.
+
+### [`nginx`](./nginx)
+Comes with Nginx installed.
