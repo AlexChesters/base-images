@@ -7,7 +7,7 @@ export default class Stack extends cdk.Stack {
 
     new codebuild.Project(this, 'Project', {
       environment: {
-        buildImage: codebuild.LinuxBuildImage.UBUNTU_14_04_BASE,
+        buildImage: codebuild.LinuxBuildImage.UBUNTU_14_04_NODEJS_10_1_0,
         computeType: codebuild.ComputeType.Small
       },
       projectName: 'base-images',
