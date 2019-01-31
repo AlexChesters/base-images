@@ -6,21 +6,16 @@ export default class Stack extends cdk.Stack {
     super(parent, name, props)
 
     new codebuild.Project(this, 'Project', {
-      buildSpec: {
-        phases: {
-          build: {
-            commands: [
-              'ls -al'
-            ]
-          }
-        },
-        version: '0.2'
-      },
       environment: {
         buildImage: codebuild.LinuxBuildImage.UBUNTU_14_04_BASE,
         computeType: codebuild.ComputeType.Small
       },
-      projectName: 'base-images'
+      projectName: 'base-images',
+      source: new codebuild.GitHubSource({
+        oauthToken: new cdk.Secret(),
+        owner: 'alexchesters',
+        repo: 'base-images'
+      })
     })
   }
 }
