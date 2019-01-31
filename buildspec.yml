@@ -8,7 +8,6 @@ phases:
       - unzip packer.zip -d packer
       - mv packer /usr/local/
       - export PATH="$PATH:/usr/local/packer"
-      - source /etc/environment
   build:
     commands:
       - packer --version
