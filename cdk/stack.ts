@@ -12,6 +12,8 @@ export default class Stack extends cdk.Stack {
       },
       projectName: 'base-images',
       source: new codebuild.GitHubSource({
+        // it's a public repo, but you still need to specify an oauthToken
+        // property
         oauthToken: new cdk.Secret(),
         owner: 'alexchesters',
         repo: 'base-images'
