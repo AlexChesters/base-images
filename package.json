@@ -25,7 +25,6 @@
     "@aws-cdk/aws-iam": "^0.22.0",
     "@types/node": "^10.12.20",
     "aws-cdk": "^0.22.0",
-    "concurrently": "^4.1.0",
     "tslint": "^5.12.1",
     "tslint-config-standard": "^8.0.1",
     "typescript": "^3.2.4"
