@@ -1,0 +1,30 @@
+{
+  "name": "base-images",
+  "version": "0.0.0",
+  "description": "A collection of base AMI definitions that can be built using Packer. These are all based on Amazon Linux 2.",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc --project tsconfig.json -w",
+    "build": "tsc --project tsconfig.json",
+    "lint": "tslint --project tsconfig.json --config tslint.json cdk/**/*.ts",
+    "test": "npm run lint",
+    "cdk": "cdk"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexChesters/base-images.git"
+  },
+  "author": "Alex Chesters <alex@cheste.rs>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexChesters/base-images/issues"
+  },
+  "homepage": "https://github.com/AlexChesters/base-images#readme",
+  "devDependencies": {
+    "@types/node": "^10.12.20",
+    "aws-cdk": "^0.22.0",
+    "tslint": "^5.12.1",
+    "tslint-config-standard": "^8.0.1",
+    "typescript": "^3.2.4"
+  }
+}
