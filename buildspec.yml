@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - npm install
+      - npm ci
       - curl "https://releases.hashicorp.com/packer/1.3.4/packer_1.3.4_linux_amd64.zip" -o packer.zip
       - unzip packer.zip -d packer
       - mv packer /usr/local/
