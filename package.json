@@ -22,6 +22,7 @@
   "homepage": "https://github.com/AlexChesters/base-images#readme",
   "devDependencies": {
     "@aws-cdk/aws-codebuild": "^0.22.0",
+    "@aws-cdk/aws-iam": "^0.22.0",
     "@types/node": "^10.12.20",
     "aws-cdk": "^0.22.0",
     "tslint": "^5.12.1",
