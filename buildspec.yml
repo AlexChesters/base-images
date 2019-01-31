@@ -10,4 +10,4 @@ phases:
       - export PATH="$PATH:/usr/local/packer"
   build:
     commands:
-      - packer --version
+      - packer build images/docker/packer.json
