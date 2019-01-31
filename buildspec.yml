@@ -10,6 +10,6 @@ phases:
       - export PATH="$PATH:/usr/local/packer"
   build:
     commands:
-      - cd images/docker/ && packer build packer.json
-      - cd images/nginx/ && packer build packer.json
-      - cd images/nodejs && packer build packer.json
+      - pushd images/docker/ && packer build packer.json && popd
+      - pushd images/nginx/ && packer build packer.json && popd
+      - pushd images/nodejs && packer build packer.json && popd
