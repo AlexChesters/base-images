@@ -47,6 +47,7 @@ export default (parent: cdk.Construct) => {
   )
 
   new codebuild.Project(parent, 'Project', {
+    badge: true,
     environment: {
       buildImage: codebuild.LinuxBuildImage.UBUNTU_14_04_NODEJS_10_1_0,
       computeType: codebuild.ComputeType.Small
