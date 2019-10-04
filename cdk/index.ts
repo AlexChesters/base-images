@@ -1,12 +1,12 @@
-import * as cdk from '@aws-cdk/cdk'
+import * as cdk from '@aws-cdk/core'
 import Stack from './stack'
 
 class Application extends cdk.App {
-  constructor () {
+  constructor() {
     super()
 
     new Stack(this, 'base-images')
   }
 }
 
-new Application().run()
+new Application().synth()
