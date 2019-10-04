@@ -56,12 +56,8 @@ export default (parent: cdk.Construct) => {
     projectName: 'base-images',
     role,
     source: codebuild.Source.gitHub({
-      // it's a public repo, but you still need to specify an oauthToken
-      // property
-      // oauthToken: new cdk.Secret(),
       owner: 'alexchesters',
-      repo: 'base-images',
-      webhook: true
+      repo: 'base-images'
     })
   })
 }
