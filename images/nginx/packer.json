@@ -20,13 +20,10 @@
     {
       "type": "shell",
       "execute_command": "echo 'packer' | sudo -S sh -c '{{ .Vars }} {{ .Path }}'",
-      "inline": [
-        "curl --silent -o epel.rpm https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm",
-        "yum install -y ./epel.rpm",
-        "amazon-linux-extras install nginx1.12",
-        "systemctl enable nginx",
-        "echo \"169.254.169.254 ec2-metadata\" >> /etc/hosts",
-        "rm epel.rpm"
+      "scripts": [
+        "images/nodejs/scripts/001-install-epel.sh",
+        "images/nodejs/scripts/002-install-nginx.sh",
+        "images/nodejs/scripts/003-configure-hosts.sh"
       ]
     }
   ]
