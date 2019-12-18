@@ -26,7 +26,7 @@
       "type": "shell",
       "execute_command": "echo 'packer' | sudo -S sh -c '{{ .Vars }} {{ .Path }}'",
       "inline": [
-        "curl --silent --location https://rpm.nodesource.com/setup_8.x | bash -",
+        "curl --silent --location https://rpm.nodesource.com/setup_12.x | bash -",
         "curl --silent -o epel.rpm https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm",
         "yum install -y ./epel.rpm",
         "yum install -y nodejs",
