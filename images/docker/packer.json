@@ -11,7 +11,9 @@
       "force_deregister": true,
       "tags": {
         "Name": "docker"
-      }
+      },
+      "vpc_id": "vpc-074a894841ed93bdb",
+      "subnet_id": "subnet-0642944fa4b2f7f9b"
     }
   ],
   "provisioners": [
