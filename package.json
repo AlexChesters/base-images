@@ -9,7 +9,7 @@
     "lint": "tslint --project tsconfig.json --config tslint.json cdk/**/*.ts",
     "test": "npm run lint",
     "cdk": "AWS_REGION=eu-west-1 cdk",
-    "build:images": "./scripts/build-all-images.sh"
+    "build:images": "sh ci/scripts/build-all-images.sh"
   },
   "repository": {
     "type": "git",
