@@ -21,9 +21,9 @@
       "type": "shell",
       "execute_command": "echo 'packer' | sudo -S sh -c '{{ .Vars }} {{ .Path }}'",
       "scripts": [
-        "images/nodejs/scripts/001-install-epel.sh",
-        "images/nodejs/scripts/002-install-nginx.sh",
-        "images/nodejs/scripts/003-configure-hosts.sh"
+        "images/nginx/scripts/001-install-epel.sh",
+        "images/nginx/scripts/002-install-nginx.sh",
+        "images/nginx/scripts/003-configure-hosts.sh"
       ]
     }
   ]
