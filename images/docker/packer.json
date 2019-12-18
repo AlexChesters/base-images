@@ -20,8 +20,8 @@
     {
       "type": "shell",
       "execute_command": "echo 'packer' | sudo -S sh -c '{{ .Vars }} {{ .Path }}'",
-      "inline": [
-        "yum install -y docker"
+      "scripts": [
+        "images/docker/scripts/001-install-docker.sh"
       ]
     }
   ]
