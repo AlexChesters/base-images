@@ -73,9 +73,40 @@ Resources:
               InputArtifacts:
                 - Name: GitHubSource
               RunOrder: 1
-              Name: CodeBuild
+              Name: Docker
               Configuration:
                 ProjectName: !Ref CodeBuildProject
+                EnvironmentVariables:
+                  - Name: IMAGE
+                    Value: docker
+            - ActionTypeId:
+                Category: Build
+                Owner: AWS
+                Version: "1"
+                Provider: CodeBuild
+              InputArtifacts:
+                - Name: GitHubSource
+              RunOrder: 1
+              Name: Nginx
+              Configuration:
+                ProjectName: !Ref CodeBuildProject
+                EnvironmentVariables:
+                  - Name: IMAGE
+                    Value: nginx
+            - ActionTypeId:
+                Category: Build
+                Owner: AWS
+                Version: "1"
+                Provider: CodeBuild
+              InputArtifacts:
+                - Name: GitHubSource
+              RunOrder: 1
+              Name: NodeJS
+              Configuration:
+                ProjectName: !Ref CodeBuildProject
+                EnvironmentVariables:
+                  - Name: IMAGE
+                    Value: nodejs
 
   CodePipelineWebhook:
     Type: AWS::CodePipeline::Webhook

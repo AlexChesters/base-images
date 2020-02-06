@@ -11,6 +11,4 @@ phases:
       - export PATH="$PATH:/usr/local/packer"
   build:
     commands:
-      - packer build images/docker/packer.json
-      - packer build images/nginx/packer.json
-      - packer build images/nodejs/packer.json
+      - packer build images/$IMAGE/packer.json
