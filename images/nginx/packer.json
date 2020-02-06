@@ -23,7 +23,8 @@
       "scripts": [
         "images/nginx/scripts/001-install-epel.sh",
         "images/nginx/scripts/002-install-nginx.sh",
-        "images/nginx/scripts/003-configure-hosts.sh"
+        "images/nginx/scripts/003-install-awslogs.sh",
+        "images/nginx/scripts/004-configure-hosts.sh"
       ]
     }
   ]

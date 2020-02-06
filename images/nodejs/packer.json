@@ -29,7 +29,8 @@
         "images/nodejs/scripts/001-install-epel.sh",
         "images/nodejs/scripts/002-install-node.sh",
         "images/nodejs/scripts/003-install-nginx.sh",
-        "images/nodejs/scripts/004-configure-hosts.sh"
+        "images/nodejs/scripts/004-install-awslogs.sh",
+        "images/nodejs/scripts/005-configure-hosts.sh"
       ]
     }
   ]
