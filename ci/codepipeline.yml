@@ -76,9 +76,7 @@ Resources:
               Name: Docker
               Configuration:
                 ProjectName: !Ref CodeBuildProject
-                EnvironmentVariables:
-                  - Name: IMAGE
-                    Value: docker
+                EnvironmentVariables: '[{"name":"IMAGE","value":"docker"}]'
             - ActionTypeId:
                 Category: Build
                 Owner: AWS
@@ -90,9 +88,7 @@ Resources:
               Name: Nginx
               Configuration:
                 ProjectName: !Ref CodeBuildProject
-                EnvironmentVariables:
-                  - Name: IMAGE
-                    Value: nginx
+                EnvironmentVariables: '[{"name":"IMAGE","value":"nginx"}]'
             - ActionTypeId:
                 Category: Build
                 Owner: AWS
@@ -104,9 +100,7 @@ Resources:
               Name: NodeJS
               Configuration:
                 ProjectName: !Ref CodeBuildProject
-                EnvironmentVariables:
-                  - Name: IMAGE
-                    Value: nodejs
+                EnvironmentVariables: '[{"name":"IMAGE","value":"nodejs"}]'
 
   CodePipelineWebhook:
     Type: AWS::CodePipeline::Webhook
