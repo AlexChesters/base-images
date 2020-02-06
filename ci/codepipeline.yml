@@ -34,7 +34,7 @@ Resources:
         Type: CODEPIPELINE
         BuildSpec: buildspec.yml
       Name: base-images
-      TimeoutInMinutes: 10
+      TimeoutInMinutes: 20
   CodePipeline:
     Type: AWS::CodePipeline::Pipeline
     Properties:
