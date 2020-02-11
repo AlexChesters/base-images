@@ -22,7 +22,7 @@
       "execute_command": "echo 'packer' | sudo -S sh -c '{{ .Vars }} {{ .Path }}'",
       "scripts": [
         "images/docker/scripts/001-install-docker.sh",
-        "images/docker/scripts/002-install-awslogs.sh"
+        "images/docker/scripts/002-install-cloudwatch-agent.sh"
       ]
     }
   ]
