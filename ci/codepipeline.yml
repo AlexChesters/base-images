@@ -85,7 +85,7 @@ Resources:
               InputArtifacts:
                 - Name: GitHubSource
               RunOrder: 1
-              Name: Nginx
+              Name: NGINX
               Configuration:
                 ProjectName: !Ref CodeBuildProject
                 EnvironmentVariables: '[{"name":"IMAGE","value":"nginx"}]'
