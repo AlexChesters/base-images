@@ -5,7 +5,7 @@ phases:
     runtime-versions:
       nodejs: 12
     commands:
-      - curl "https://releases.hashicorp.com/packer/1.4.5/packer_1.4.5_linux_amd64.zip" -o packer.zip
+      - curl "https://releases.hashicorp.com/packer/1.5.5/packer_1.5.5_linux_amd64.zip" -o packer.zip
       - unzip packer.zip -d packer
       - mv packer /usr/local/
       - export PATH="$PATH:/usr/local/packer"
