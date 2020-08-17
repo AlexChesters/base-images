@@ -1,5 +1,16 @@
 version: 0.2
 
+batch:
+  fast-fail: false
+  build-matrix:
+    dynamic:
+      env:
+        variables:
+          IMAGE:
+            - docker
+            - nginx
+            - nodejs
+
 phases:
   install:
     runtime-versions:

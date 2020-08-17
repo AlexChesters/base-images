@@ -34,6 +34,9 @@ Resources:
         Type: CODEPIPELINE
         BuildSpec: buildspec.yml
       Name: base-images
+      BuildBatchConfig:
+        CombineArtifacts: false
+        TimeoutInMins: 30
       TimeoutInMinutes: 20
   CodePipeline:
     Type: AWS::CodePipeline::Pipeline
@@ -63,7 +66,7 @@ Resources:
                 Branch: master
                 OAuthToken: "{{resolve:ssm:/Secrets/GitHub-Token:1}}"
                 PollForSourceChanges: false
-        - Name: Build
+        - Name: Build-Images
           Actions:
             - ActionTypeId:
                 Category: Build
@@ -73,34 +76,10 @@ Resources:
               InputArtifacts:
                 - Name: GitHubSource
               RunOrder: 1
-              Name: Docker
+              Name: Build
               Configuration:
+                BatchEnabled: true
                 ProjectName: !Ref CodeBuildProject
-                EnvironmentVariables: '[{"name":"IMAGE","value":"docker"}]'
-            - ActionTypeId:
-                Category: Build
-                Owner: AWS
-                Version: "1"
-                Provider: CodeBuild
-              InputArtifacts:
-                - Name: GitHubSource
-              RunOrder: 1
-              Name: NGINX
-              Configuration:
-                ProjectName: !Ref CodeBuildProject
-                EnvironmentVariables: '[{"name":"IMAGE","value":"nginx"}]'
-            - ActionTypeId:
-                Category: Build
-                Owner: AWS
-                Version: "1"
-                Provider: CodeBuild
-              InputArtifacts:
-                - Name: GitHubSource
-              RunOrder: 1
-              Name: NodeJS
-              Configuration:
-                ProjectName: !Ref CodeBuildProject
-                EnvironmentVariables: '[{"name":"IMAGE","value":"nodejs"}]'
 
   CodePipelineWebhook:
     Type: AWS::CodePipeline::Webhook
