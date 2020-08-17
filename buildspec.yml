@@ -2,14 +2,19 @@ version: 0.2
 
 batch:
   fast-fail: false
-  build-matrix:
-    dynamic:
+  build-list:
+    - identifier: docker
       env:
         variables:
-          IMAGE:
-            - docker
-            - nginx
-            - nodejs
+          IMAGE: docker
+    - identifier: nginx
+      env:
+        variables:
+          IMAGE: nginx
+    - identifier: nodejs
+      env:
+        variables:
+          IMAGE: nodejs
 
 phases:
   install:
