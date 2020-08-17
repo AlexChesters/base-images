@@ -37,6 +37,7 @@ Resources:
       BuildBatchConfig:
         CombineArtifacts: false
         TimeoutInMins: 30
+        ServiceRole: !Ref CodeBuildRole
       TimeoutInMinutes: 20
   CodePipeline:
     Type: AWS::CodePipeline::Pipeline
