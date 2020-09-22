@@ -65,7 +65,7 @@ Resources:
                 Owner: AlexChesters
                 Repo: base-images
                 Branch: master
-                OAuthToken: "{{resolve:ssm:/Secrets/GitHub-Token:1}}"
+                OAuthToken: "{{resolve:ssm:/Secrets/GitHub-Personal-Access-Token:1}}"
                 PollForSourceChanges: false
         - Name: Build-Images
           Actions:
