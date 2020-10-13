@@ -30,8 +30,9 @@
         "images/nodejs/scripts/002-install-node.sh",
         "images/nodejs/scripts/003-install-nginx.sh",
         "images/nodejs/scripts/004-install-certbot.sh",
-        "images/nodejs/scripts/005-install-cloudwatch-agent.sh",
-        "images/nodejs/scripts/006-configure-hosts.sh"
+        "images/nodejs/scripts/005-install-jq.sh",
+        "images/nodejs/scripts/006-install-cloudwatch-agent.sh",
+        "images/nodejs/scripts/007-configure-hosts.sh"
       ]
     }
   ]

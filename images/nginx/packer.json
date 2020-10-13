@@ -25,7 +25,8 @@
         "images/nginx/scripts/002-install-nginx.sh",
         "images/nginx/scripts/003-install-certbot.sh",
         "images/nginx/scripts/004-install-cloudwatch-agent.sh",
-        "images/nginx/scripts/005-configure-hosts.sh"
+        "images/nginx/scripts/005-install-jq.sh",
+        "images/nginx/scripts/006-configure-hosts.sh"
       ]
     }
   ]
